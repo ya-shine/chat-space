@@ -1,0 +1,107 @@
+@mixin displayFlex() {
+  display: flex;
+  justify-content: space-between;
+}
+$textColor1: #333333;
+$textColor2: #999999;
+$btnColor: #38aef0;
+
+.main-chat {
+  width: calc(100% - 300px);
+  height: 100vh;
+  float: left;
+  &__header {
+    height: 100px;
+    background-color: #ffffff;
+    @include displayFlex();
+    &--left {
+      padding-left: 40px;
+      &-groupname {
+        color: $textColor1;
+        font-size: 20px;
+        padding-top: 35px;
+      }
+      &-memmber {
+        color: $textColor2;
+        font-size: 12px;
+        padding-top: 15px;
+      }
+    }
+    &--right {
+      width: 72px;
+      height: 40px;
+      margin-top: 28px;
+      margin-right: 40px;
+      border: 1px solid $btnColor;
+      &-edit {
+        color: $btnColor;
+        font-size: 16px;
+        padding: 0 20px;
+        text-decoration: none;
+        line-height: 40px;
+      }
+    }
+  }
+  &__contents {
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+    padding: 35px 40px;
+    &__content {
+      padding-bottom: 46px;
+      &__info {
+        display: flex;
+        &--memmber {
+          color: $textColor1;
+          font-size: 16px;
+        }
+        &--date {
+          color: $textColor2;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__message {
+        color: #434A54;
+        font-size: 14px;
+        padding-top: 12px;
+      }
+    }
+  }
+  &__form {
+    height: 90px;
+    background-color: #d2d2d2;
+    padding: 20px 40px;
+    @include displayFlex();
+    &__input {
+      width: 100%;
+      position: relative;
+      @include displayFlex();
+      &--text {
+        width: 100%;
+        height: 50px;
+        padding: 0 40px 0 10px;
+      }
+      &--image {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        &-icon {
+          font-size: 25px;
+          cursor: pointer;
+        }
+        &-file {
+          display: none;
+        }
+      }
+      &--send {
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $btnColor;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+}
