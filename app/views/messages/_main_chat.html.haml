@@ -27,9 +27,9 @@
         こんにちは！
   %form.main-chat__form
     .main-chat__form__input
-      %input{:type => "text", :placeholder => "Type a message", class: "main-chat__form__input--text"}
+      %input{type: "text", placeholder: "Type a message", class: "main-chat__form__input--text"}
       .main-chat__form__input--image
         %label{class: "main-chat__form__input--image-icon"}
           = icon('far', 'image')
           %input{type: "file", class: "main-chat__form__input--image-file"}
-    %input{:type => "submit", :value => "Send", class: "main-chat__form__input--send"}
+    %input{type: "submit", value: "Send", class: "main-chat__form__input--send"}
