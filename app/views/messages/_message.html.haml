@@ -6,6 +6,6 @@
       = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .message__content__message
     - if message.body.present?
-      %p.main-chat__content__message--text
+      %p.message__content__message--text
         = message.body
     = image_tag message.image.url, class: 'main-chat__content__message--image' if message.image.present?
